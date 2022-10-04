@@ -7,111 +7,243 @@ Author: Jonathan Quist
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 
 body {
-	width:100%;
+	width: 100%;
 	margin: 0;
 	font-family: 'Roboto', 'Calibri', 'Verdana', sans-serif;
 	color: #333;
-	line-height:1rem;
+	line-height: 1rem;
 }
 
 #container {
-	width:80%;
+	width: 100%;
 	margin: 5rem auto;
 }
 
 #container #main {
-	width:100%;
-	max-width:1400px;
-	background-color: #FAF8F6;
-	margin: 5rem auto;
+    width: 975px;
+	margin: auto;
+    padding: 1rem 2rem 1rem 2rem;
+    box-sizing: border-box;
+    background-color: #FAF8F6;
 }
 
 #container #main #deck {
-	width:100%;
-	display:flex;
-	flex-wrap:wrap;
-	flex-direction:row;
-	
-
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+    width:100%;
 }
 
 #container #main #deck .link  {
-	display:flex;
-	flex:1;
-	min-width: 12rem;
+    position: relative;
+	display: flex;
+	flex: 1;
+    min-width: 12rem;
 	max-width: 12rem;
-	margin:1rem;
-	text-align:center;
-	position:relative;
-	
+	margin: 1.1rem;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
 }
 
 #container #main #deck .link .card  {
-	min-width: 12rem;
-	max-width: 12rem;
-	height:100%;
-	border-radius: 0.2rem;
 	overflow: hidden;
 	background-color: #FFF;
-	position:relative;
-	filter: drop-shadow(0px 4px 4px #3333);
-	z-index:3;
+	z-index: 3;
 }
 
-#container #main #deck .link .card img.card-top {
-	width:100%;
+#container #main #deck .link .card img.card-head {
+	width: 100%;
 }
 
 #container #main #deck .link .card .card-text {
-	padding:0.2rem 1rem ;
+	padding: 0.2rem 1rem ;
 }
 
 #container #main #deck .link .card .card-text h1 {
 	margin-block-end: 0.3rem;
-    font-size: 0.83em;
+    font-size: 0.83rem;
     font-weight: 900;
 }
 
 #container #main #deck .link .card .card-text p {
 	margin-block-start: 0.3rem;
-	font-size:0.6rem;
+	font-size: 0.6rem;
 }
 
-#container #main #deck .link .card-back-1  {
-	position:absolute;
-	height:100%;
-	width:100%;
+#container #main #deck .link .card-back  {
+	position: absolute;
+	height: 100%;
+	width: 100%;
 	background: linear-gradient(#D3CEC0, #fff);
-	border-radius: 0.2rem;
-	transform: rotate(-4deg);
-	filter: drop-shadow(0px 4px 4px #3333);
-	z-index:2;
 }
 
-#container #main #deck .link .card-back-2  {
-	position:absolute;
-	height:100%;
-	width:100%;
-	background: linear-gradient(#D3CEC0, #fff);
-	border-radius: 0.2rem;
+#container #main #deck .link .back-1  {
+    transform: rotate(-4deg);
+	z-index: 2;
+}
+
+#container #main #deck .link .back-2  {
 	transform: rotate(2deg);
-	filter: drop-shadow(0px 4px 4px #3333);
-	z-index:1;
+	z-index: 1;
+}
+
+#container #main #deck .link:hover .card,
+#container #main #deck .link:hover .card-back {
+    transform: scale(1.05);
+}
+
+#container #main #deck .link:hover .card-back {
+    transform: rotate(0deg);
 }
 
 button.action {
-		background-color: #FDCE4B;
-		border:0px;
-		border-radius: 0.2rem;
-		margin:1rem 0rem 1rem 1rem;
-		padding:0.5rem 1.5rem;
-		font-family : inherit;
-		font-size:0.7rem;
-		font-weight:900;
-		letter-spacing: 0.1rem;
+	background-color: #FDCE4B;
+	border: 0px;
+	margin: 2rem 0rem 1rem 1rem;
+	padding: 0.5rem 1.5rem;
+	font-family: inherit;
+	font-size: 0.7rem;
+	font-weight: 900;
+	letter-spacing: 0.1rem;
 }
 
 button.action:hover {
-		background-color: #ECBD3A;
+	background-color: #a88219;
 }
 		
+.corner-radius {
+    border-radius: 0.2rem;
+}
+
+.shadow {
+    filter: drop-shadow(0px 4px 4px #3333);
+}
+
+.animate {
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+
+/*-----Screen adjustments MONITOR 1440+ -----*/
+
+@media (min-width: 1440px) {
+
+    #container #main {
+        width: 1400px;
+        padding:1rem 3.7rem 1rem 3.8rem;
+    }
+
+    #container #main #deck .link{
+        min-width: 13rem;
+        max-width: 13rem;
+    }
+
+    #container #main #deck .link  {
+        margin: 1.5rem;
+    }
+
+    #container #main #deck .link .card .card-text h1 {
+        margin-block-end: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 900;
+    }
+    
+    #container #main #deck .link .card .card-text p {
+        margin-block-start: 0.5rem;
+        font-size: 0.65rem;
+    }
+
+}
+
+
+/*-----Screen adjustments TABLET 991- -----*/
+
+@media (max-width: 991px) {
+
+    #container {
+        width: 80%;
+        margin-top: 2rem;
+    }
+
+    #container #main {
+        width: 550px;
+    }
+
+    #container #main #deck .link  {
+        margin: 1.5rem;
+    }
+
+}
+
+
+/*-----Screen adjustments MOBILE LANDSCAPE 767- -----*/
+
+@media (max-width: 767px) {
+
+    #container {
+        width: 90%;
+        margin-top: 1rem;
+    }
+
+    #container #main {
+        width: 90%;
+    }
+
+    #container #main #deck {
+        justify-content: center;
+    }
+
+    #container #main #deck .link{
+        min-width: 13rem;
+        max-width: 13rem;
+        margin: 1rem 2rem 1.5rem 2rem;;
+    }
+
+    #container #main #deck .link .card .card-text h1 {
+        margin-block-end: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 900;
+    }
+    
+    #container #main #deck .link .card .card-text p {
+        margin-block-start: 0.5rem;
+        font-size: 0.65rem;
+    }
+
+    button.action {
+        margin: 1rem auto;
+        padding: 1rem 1.9rem;
+        font-size: 0.9rem;
+        font-weight: 900;
+    }
+
+    button.action:last-child {
+       float:right;
+    }
+
+}
+
+
+/*-----Screen adjustments MOBILE PORTRAIT 478- -----*/
+
+@media (max-width: 478px) {
+
+    #container #main {
+        width: min-content;
+    }
+
+    button.action {
+        display:block;
+        margin: 1rem auto;
+        width:75%;
+        font-size: 0.9rem;
+        font-weight: 900;
+    }
+
+    button.action:last-child {
+        float:none;
+     }
+
+}

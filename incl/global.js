@@ -19,7 +19,7 @@ for(let i = 0; i<arr.length; i++) {
 }
 
 function createCard(n) {
-	const card = '<a src="#" class="link"><div class="card"><img class="card-top" src="img/card.jpg" alt="Card top"> <div class="card-text"> <h1>'+arr[n].title+'</h1> <p>'+arr[n].text+'</p> </div> </div><div class="card-back-1"> </div><div class="card-back-2"> </div></a>';
+	const card = '<a href="#" class="link"><div class="card corner-radius shadow animate"><img class="card-head" src="img/card.jpg" alt="Card top"> <div class="card-text"> <h1>'+arr[n].title+'</h1> <p>'+arr[n].text+'</p> </div> </div><div class="card-back back-1 corner-radius shadow animate"> </div><div class="card-back back-2 corner-radius shadow animate"> </div></a>';
 	const tempWrapper = document.createElement('div');
 	tempWrapper.innerHTML = card;
 	cardDeck.appendChild(tempWrapper.firstChild);
