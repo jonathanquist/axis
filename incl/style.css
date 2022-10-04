@@ -7,19 +7,19 @@ Author: Jonathan Quist
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 
 body {
-	margin: 0;
-	font-family: 'Roboto', 'Calibri', 'Verdana', sans-serif;
-	line-height: 1rem;
+    margin: 0;
+    font-family: 'Roboto', 'Calibri', 'Verdana', sans-serif;
+    line-height: 1rem;
 }
 
 #container {
-	width: 100%;
-	margin: 5rem auto;
+    width: 100%;
+    margin: 5rem auto;
 }
 
 #container #main {
     width: 49rem;
-	margin: auto;
+    margin: auto;
     padding: 1rem 2rem 1rem 2rem;
     box-sizing: border-box;
     background-color: #FAF8F6;
@@ -33,54 +33,54 @@ body {
 
 #container #main #deck .link  {
     position: relative;
-	display: flex;
+    display: flex;
     width: 12rem;
-	margin: 1.5rem;
+    margin: 1.5rem;
     color: #333;
     text-decoration: none;
     text-align: center;
 }
 
 #container #main #deck .link .card  {
-	overflow: hidden;
-	background-color: #FFF;
-	z-index: 3;
+    overflow: hidden;
+    background-color: #FFF;
+    z-index: 3;
 }
 
 #container #main #deck .link .card img.card-head {
-	width: 100%;
+    width: 100%;
 }
 
 #container #main #deck .link .card .card-text {
-	padding: 0.2rem 1rem ;
+    padding: 0.2rem 1rem ;
 }
 
 #container #main #deck .link .card .card-text h1 {
-	margin-block-end: 0.3rem;
+    margin-block-end: 0.3rem;
     font-size: 0.83rem;
     font-weight: 900;
 }
 
 #container #main #deck .link .card .card-text p {
-	margin-block-start: 0.3rem;
-	font-size: 0.6rem;
+    margin-block-start: 0.3rem;
+    font-size: 0.6rem;
 }
 
 #container #main #deck .link .card-back  {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	background: linear-gradient(#D3CEC0, #fff);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#D3CEC0, #fff);
 }
 
 #container #main #deck .link .back-1  {
     transform: rotate(-4deg);
-	z-index: 2;
+    z-index: 2;
 }
 
 #container #main #deck .link .back-2  {
-	transform: rotate(2deg);
-	z-index: 1;
+    transform: rotate(2deg);
+    z-index: 1;
 }
 
 #container #main #deck .link:hover .card,
@@ -95,18 +95,18 @@ button.action:hover {
 
 button.action {
     cursor: pointer;
-	border: 0px;
-	margin: 2rem 0rem 2rem 1rem;
-	padding: 0.5rem 1.5rem;
+    border: 0px;
+    margin: 2rem 0rem 2rem 1rem;
+    padding: 0.5rem 1.5rem;
     background-color: #FDCE4B;
-	font-family: inherit;
-	font-size: 0.7rem;
-	font-weight: 900;
-	letter-spacing: 0.1rem;
+    font-family: inherit;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
 }
 
 button.action:hover {
-	background-color: #c79c26;
+    background-color: #c79c26;
 }
 		
 .corner-radius {
@@ -189,7 +189,7 @@ button.action:hover {
     }
 
     button.action:last-child {
-       float: right;
+        float: right;
     }
 
 }
