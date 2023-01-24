@@ -5,3 +5,5 @@ Planen var från början att infokorten skulle genereras från arrayen, och alla
 
 ## Grid istället för flexbox
 Ville egentligen använda mig av flexbox för att få en flytande responsiv design, men har efter ett antal timmar fått erkänna mig besegrad när det kom till vad jag ville åstadkomma. Har därför bytt ut till grid då jag kände jag fick bättre kontroll över resultatet.
+
+## Test
